@@ -1,0 +1,73 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+input,
+button,
+textarea {
+  font: inherit;
+}
+.text-1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+::placeholder {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 20px;
+  font-size: 32px;
+  line-height: 39px;
+}
+.wrapper {
+  margin-top: 100px;
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+}
+.title {
+  margin-bottom: 30px;
+}
+.section-input-user {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.input-user__title {
+  height: 60px;
+}
+.input-user__text {
+  height: 250px;
+}
+.send-btn {
+  height: 60px;
+  border: 1px solid #0094ff;
+  background-color: #0094ff;
+  color: #fff;
+  font-size: 32px;
+  line-height: 39px;
+}
+.section-posts__title {
+  margin-bottom: 50px;
+}
+.post {
+  margin-bottom: 50px;
+}
+.post__date {
+  font-size: 25px;
+  line-height: 30px;
+  color: #0094ff;
+}
+.post__title {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+}
+.post__text {
+  font-size: 25px;
+  line-height: 30px;
+}
