@@ -21,7 +21,9 @@ textarea {
   line-height: 39px;
 }
 .wrapper {
-  margin-top: 100px;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 50px;
   display: flex;
   gap: 100px;
   justify-content: center;
@@ -29,11 +31,13 @@ textarea {
 .title {
   margin-bottom: 30px;
 }
+.section {
+  width: calc(50% - 25px);
+}
 .section-input-user {
-  width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 20px;
 }
 .input-user__title {
   height: 60px;
@@ -41,19 +45,29 @@ textarea {
 .input-user__text {
   height: 250px;
 }
-.send-btn {
+button {
   height: 60px;
-  border: 1px solid #0094ff;
-  background-color: #0094ff;
   color: #fff;
   font-size: 32px;
   line-height: 39px;
 }
+.send-btn {
+  border: 1px solid #0094ff;
+  background-color: #0094ff;
+}
+.remove-btn {
+  border: 1px solid #b90505;
+  background-color: #b90505;
+}
 .section-posts__title {
   margin-bottom: 50px;
 }
+.posts {
+  color: gray;
+}
 .post {
   margin-bottom: 50px;
+  color: black;
 }
 .post__date {
   font-size: 25px;
@@ -70,4 +84,21 @@ textarea {
 .post__text {
   font-size: 25px;
   line-height: 30px;
+}
+.expenses-symbol {
+  color: green;
+}
+.red {
+  color: red;
+}
+
+@media only screen and (max-width: 1199px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .section {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

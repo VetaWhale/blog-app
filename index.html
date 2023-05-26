@@ -12,11 +12,11 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Document</title>
+    <title>Blog App</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="section-input-user">
+      <div class="section-input-user section">
         <h2 class="title text-1">Новый пост</h2>
         <input
           class="input-user__title js-title-post"
@@ -25,6 +25,9 @@
           id=""
           placeholder="Заголовок"
         />
+        <p class="js-expenses-symbol-title expenses-symbol">
+          Рекомендуемая длина заголовка: 100 символов
+        </p>
         <textarea
           class="input-user__text js-text-post"
           name=""
@@ -33,11 +36,15 @@
           rows="10"
           placeholder="Напиши пост"
         ></textarea>
+        <p class="js-expenses-symbol-text expenses-symbol">
+          Рекомендуемая длина поста: 200 символов
+        </p>
         <button class="js-send-btn send-btn">Опубликовать</button>
+        <button class="js-remove-btn remove-btn">Очистить ленту</button>
       </div>
-      <div class="section-posts">
+      <div class="section-posts section">
         <h2 class="section-posts__title text-1">Лента</h2>
-        <div class="posts js-posts"></div>
+        <div class="posts js-posts">Тут пока пусто..</div>
       </div>
     </div>
 
