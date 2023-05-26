@@ -9,6 +9,7 @@ const buttonAddPost = document.querySelector('.js-send-btn');
 const historyList = document.querySelector('.js-posts');
 const inputOutsideTitle = document.querySelector('.js-expenses-symbol-title');
 const inputOutsideText = document.querySelector('.js-expenses-symbol-text');
+const buttonRemovePosts = document.querySelector('.js-remove-btn');
 
 const posts = [];
 
@@ -33,6 +34,10 @@ buttonAddPost.addEventListener('click', function() {
     addPost(postFromUser);
 
     renderPosts();
+})
+
+buttonRemovePosts.addEventListener('click', function() {
+    clearPosts();
 })
 
 function getTitleFromUser() {
@@ -67,7 +72,19 @@ function clearOutsideText() {
 
 function getValueFromUser() {
     const today = new Date();
-    const date = today.toLocaleString();
+    let day = today.getDate();
+    if (day < 10) day = '0' + day;
+    let mount = today.getMonth();
+    if (mount < 10) mount = '0' + mount;
+    let year = today.getFullYear();
+    if (year < 10) year = '0' + year;
+    let hh = today.getHours();
+    if (hh < 10) hh = '0' + hh;
+    let mm = today.getMinutes();
+    if (mm < 10) mm = '0' + mm;
+
+    if (today < 10) today = '0' + today;
+    const date = `${day}.${mount}.${year} ${hh}:${mm}`;
     const title = inputTitle.value;
     const text = inputText.value;
 
@@ -111,4 +128,11 @@ function renderPosts() {
     });
 
     historyList.innerHTML = postsHTML;
+}
+
+function clearPosts() {
+    for (let i = 0; i < posts.length; i++) {
+        delete(posts[i])
+    }
+    historyList.innerHTML = 'Тут пока пусто..';
 }

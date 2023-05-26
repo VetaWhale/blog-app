@@ -39,6 +39,10 @@ textarea {
   flex-direction: column;
   gap: 20px;
 }
+input,
+textarea {
+  font-size: 30px;
+}
 .input-user__title {
   height: 60px;
 }
@@ -91,14 +95,21 @@ button {
 .red {
   color: red;
 }
+.close {
+  box-sizing: border-box;
+  height: 24px;
+  width: 24px;
+  background: url(../img/close-btn.png) no-repeat;
+}
 
 @media only screen and (max-width: 1199px) {
   .wrapper {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     flex-direction: column;
   }
   .section {
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
