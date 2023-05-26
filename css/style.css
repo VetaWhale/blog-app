@@ -14,9 +14,6 @@ textarea {
   line-height: 48px;
 }
 ::placeholder {
-  padding-top: 11px;
-  padding-bottom: 11px;
-  padding-left: 20px;
   font-size: 32px;
   line-height: 39px;
 }
@@ -41,7 +38,11 @@ textarea {
 }
 input,
 textarea {
+  padding-left: 10px;
   font-size: 30px;
+}
+textarea {
+  padding-top: 10px;
 }
 .input-user__title {
   height: 60px;
