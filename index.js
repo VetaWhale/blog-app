@@ -77,7 +77,6 @@ function getValueFromUser() {
     let mount = today.getMonth();
     if (mount < 10) mount = '0' + mount;
     let year = today.getFullYear();
-    if (year < 10) year = '0' + year;
     let hh = today.getHours();
     if (hh < 10) hh = '0' + hh;
     let mm = today.getMinutes();
@@ -88,9 +87,6 @@ function getValueFromUser() {
     const title = inputTitle.value;
     const text = inputText.value;
 
-    if (!title || !text) return;
-
-    clearInput();
 
     return {
         date: date,
@@ -103,11 +99,15 @@ function clearInput() {
     inputText.value = '';
 }
 function addPost({ date, title, text}) {
+    if (!title || !text) return;
+
+    clearInput();
+
     posts.push({
         date,
         title,
         text,
-    })
+    });
 }
 function getPosts() {
     return posts;
